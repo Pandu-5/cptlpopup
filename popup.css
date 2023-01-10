@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #6538AE;
+    --black: #000;
+    --wt: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* sideBar CSS */
+
+.sideBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: var(--main-color);
+    padding: 6px 14px;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    color: var(--wt);
+}
+
+.sideBar .menu-bars {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sideBar .logo .profile {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.sideBar .logo .profile .details {
+    padding-left: 10px;
+}
+
+.sideBar .menu-bars #btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sideBar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sideBar .nav-list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.sideBar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sideBar li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.sideBar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+    border-radius: 12px;
+    color: var(--wt);
+}
+
+/* Hidden NavBar */
+
+.logo .menu-icon {
+    color: var(--wt);
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+
+.nav .sidebar-hid {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    background-color: var(--main-color);
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.nav.open .sidebar-hid {
+    left: 0;
+}
+
+.sidebar-hid .sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.sidebar-content .list {
+    list-style: none;
+}
+
+.list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    padding: 1px 4px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.lists .nav-link:hover,
+.lists .nav-link-1:hover,
+.lists .nav-link-2:hover,
+.lists .nav-link-3:hover {
+    background-color: #e540f4;
+}
+
+.nav-link .icon {
+    margin-right: 10px;
+    font-size: 14px;
+    color: var(--wt);
+}
+
+/* link-1 */
+.content-1 {
+    margin-top: 0px;
+    display: none;
+    transition: all 0.5s ease-out;
+}
+
+/* level-1 */
+.list .nav-link-1 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 4px 0px;
+    padding: 0px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.lists .nav-link-1:hover {
+    background-color: #be40f4;
+}
+
+.nav-link-1 .icon {
+    margin-right: 10px;
+    font-size: 10px;
+    color: var(--wt);
+}
+
+.nav-link-1 .link-1 {
+    font-size: 14px;
+    color: var(--wt);
+}
+
+/* level-2 */
+
+.list .nav-link-2 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 4px 0px;
+    padding: 0px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.nav-link-2 .icon {
+    margin-right: 10px;
+    font-size: 10px;
+    color: var(--wt);
+}
+
+.nav-link-2 .link-1 {
+    font-size: 14px;
+    color: var(--wt);
+}
+
+/* level-3 */
+
+.list .nav-link-3 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 4px 0px;
+    padding: 0px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.nav-link-3 .icon {
+    margin-right: 10px;
+    font-size: 10px;
+    color: var(--wt);
+}
+
+.nav-link-3 .link-1 {
+    font-size: 14px;
+    color: var(--wt);
+}
+
+
+.nav-link .link {
+    font-size: 14px;
+    color: var(--wt);
+    font-weight: 300;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav.open~.overlay {
+    opacity: 1;
+    left: 260px;
+    pointer-events: auto;
+}
+
+
+/* Header CSS */
+
+.header {
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 8%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.0rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.header .icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .icons .hi {
+    font-size: 15px;
+}
+
+
+.header .logo i {
+    color: var(--main-color);
+}
+
+.content {
+    display: none;
+    z-index: 1000;
+    width: 200px;
+    flex-direction: column;
+    margin-right: 20px;
+    background: #11AE0E;
+    float: right;
+    box-shadow: 1px 3px 9px rgb(171, 169, 169);
+    transition: all 0.5 ease-in-out;
+}
+
+.content .imgpro {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    background: #C6A5FB;
+}
+
+.content .prodet {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: var(--wt);
+}
+
+.content .prodet .set1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Title Btn CSS */
+
+.titbtn {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    margin-left: 80px;
+    margin-top: 60px
+}
+
+.titbtn h3 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.titbtn .popbtn button {
+    border: none;
+    color: var(--wt);
+    background: #11AE0E;
+    padding: 6px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 3px 4px rgb(200, 199, 199);
+}
+
+
+/* pop up CSS */
+.login-form {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.login-form .form {
+    width: 70rem;
+    height: 40rem;
+    border-radius: 20px;
+}
+
+.login-form .form .main-head .head-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFCA08;
+    padding: 15px;
+}
+
+.login-form .form .main-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6538AE;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.login-form .form .main-head .cross .fa-times {
+    position: absolute;
+    margin-left: 25rem;
+    cursor: pointer;
+    color: var(--wt);
+}
+
+.login-form .form-part {
+    border-radius: 0px 0px 20px 20px;
+    background: var(--wt);
+    overflow: hidden;
+}
+
+.login-form .form-part .level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6538AE;
+    padding: 5px 10px;
+    margin: 10px 25px;
+    border-radius: 8px;
+}
+
+.login-form .form-part .level .level-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form .form-part .level .level-head h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFCA08;
+}
+
+.login-form .form-part .level .det .box-1 h3,
+.login-form .form-part .level .det .box-2 h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFCA08;
+}
+
+
+.login-form .form-part .level .det {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 1rem;
+    padding: 10px 20px;
+    justify-items: center;
+
+}
+
+.login-form .form-part .level .box input {
+    border: 2px solid #bebcbc;
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+
+.login-form .form-part .level .box {
+    margin: 5px auto;
+}
+
+.login-form .form-part .level .box label {
+    width: 200px;
+    display: inline-block;
+    color: var(--wt);
+    font-size: 13px;
+}
+
+.login-form .form-part .level .det .box-1 .box textarea {
+    width: 100%;
+    border-radius: 8px;
+}
+
+input:focus,
+select:focus {
+    border: none;
+}
+
+.login-form .form-part .btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.login-form .form-part .btns button {
+    width: 10rem;
+    padding: 5px 12px;
+    margin: 5px 10px;
+    font-size: 15px;
+    background: #11AE0E;
+    border: 1px solid #11AE0E;
+    border-radius: 8px;
+    color: var(--wt);
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+    .login-form .form {
+        width: 60rem;
+    }
+
+    .login-form .form .main-head .cross .fa-times {
+        margin-left: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 998px) {
+    .titbtn .search-form {
+        width: 20rem;
+    }
+
+}
+
+@media only screen and (max-width: 910px) {
+    .login-form .form {
+        width: 40rem;
+    }
+
+    .login-form .form .main-head .cross .fa-times {
+        margin-left: 10rem;
+    }
+
+
+}
+
+
+@media (max-width: 847px) {
+
+    .sideBar {
+        width: 70px;
+    }
+
+    .titbtn {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titbtn .search-form {
+        margin-bottom: 10px;
+    }
+
+    .titbtn .popbtn {
+        margin: 6px;
+    }
+
+
+}
+
+
+@media (max-width: 657px) {
+
+    .login-form .form {
+        width: 25rem;
+    }
+
+    .login-form .form .main-head .cross .fa-times {
+        margin-left: 2.5rem;
+    }
+
+    .login-form .form-part .level .det {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 627px) {
+
+    .titbtn {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titbtn .stitle {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .titbtn {
+        margin-left: 55px;
+    }
+
+    .header .logo i {
+        display: none;
+    }
+
+    .header .icons .hi {
+        font-size: 20px;
+    }
+
+    .titbtn .search-form {
+        width: 15rem;
+    }
+
+
+}
+
+@media (max-width: 445px) {
+
+    .login-form .form {
+        width: 19rem;
+    }
+
+    .login-form .form .main-head .cross .fa-times {
+        margin-left: 1rem;
+    }
+
+    .login-form .form .main-head .head-part h3 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .login-form .form .main-head .head-part h4 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 412px) {
+    .titbtn .newbtn {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 388px) {
+    .sideBar {
+        width: 60px;
+        padding: 5px 8px;
+    }
+
+    .content {
+        margin-top: 70px;
+    }
+
+    .titbtn .search-form {
+        width: 13rem;
+    }
+
+}
