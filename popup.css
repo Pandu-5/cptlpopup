@@ -615,6 +615,11 @@ select:focus {
         width: 15rem;
     }
 
+    .login-form .form-part .level .box input {
+        padding: 3px;
+        border-radius: 6px;
+    }
+
 
 }
 
@@ -644,6 +649,11 @@ select:focus {
         flex-direction: column;
     }
 
+    .login-form .form-part .level {
+        padding: 5px 10px;
+        margin: 10px 15px;
+    }
+
 }
 
 
@@ -659,6 +669,10 @@ select:focus {
 
     .titbtn .search-form {
         width: 13rem;
+    }
+
+    .login-form .form {
+        width: 20rem;
     }
 
 }
