@@ -569,7 +569,7 @@ select:focus {
 @media (max-width: 657px) {
 
     .login-form .form {
-        width: 25rem;
+        width: 30rem;
     }
 
     .login-form .form .main-head .cross .fa-times {
@@ -621,7 +621,7 @@ select:focus {
 @media (max-width: 445px) {
 
     .login-form .form {
-        width: 19rem;
+        width: 23rem;
     }
 
     .login-form .form .main-head .cross .fa-times {
